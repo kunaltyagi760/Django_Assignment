@@ -1,0 +1,50 @@
+1. manage.py
+
+Purpose:
+This is a command-line utility that lets you interact with your Django project in various ways. It is a wrapper around the django-admin command-line tool that takes care of setting the DJANGO_SETTINGS_MODULE environment variable so that it points to your project’s settings module.
+
+Common Commands:
+python manage.py runserver: Starts the development web server.
+python manage.py migrate: Applies database migrations.
+python manage.py makemigrations: Creates new migrations based on the changes detected in your models.
+python manage.py shell: Opens an interactive Python shell with your project’s context.
+python manage.py createsuperuser: Creates a new superuser for the admin site.
+
+Contribution to Project Structure:
+Provides a unified entry point for various Django administrative tasks, making project management easier and more consistent.
+
+
+2. settings.py
+
+Purpose:
+This file contains the configuration for your Django project. It includes settings for database connections, installed applications, middleware, static files, templates, and other project-specific configurations.
+
+Key Sections:
+DEBUG: Boolean that turns on/off debug mode.
+INSTALLED_APPS: A list of strings designating all applications that are enabled in this Django installation.
+DATABASES: Defines the database configurations for your project.
+MIDDLEWARE: A list of middleware classes to use.
+TEMPLATES: Configuration for the template engine.
+STATIC_URL and MEDIA_URL: URLs to handle static and media files.
+AUTH_PASSWORD_VALIDATORS: Settings for password validation.
+
+Contribution to Project Structure:
+Centralizes all the configuration settings of your project, making it easy to manage and modify the project’s behavior.
+
+3. urls.py
+
+Purpose:
+This file is used to define the URL patterns for your project. It maps URLs to the appropriate view functions or classes that handle requests.
+
+Key Sections:
+urlpatterns: A list of url() or path() functions that route different URL patterns to views. It can also include include() to reference other URL configurations.
+
+Contribution to Project Structure:
+Provides a clear and organized way to manage URL routing, making it easy to understand and extend the project's navigational structure.
+
+Summary
+manage.py: Facilitates command-line interaction with the Django project.
+settings.py: Centralizes configuration settings for the project.
+urls.py: Manages URL routing to connect URLs with views.
+
+Together, these files contribute to a well-structured and manageable Django project by separating configuration, routing, and management concerns.
