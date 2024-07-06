@@ -103,3 +103,32 @@ Isolation:
 
 Apps can be developed and run in isolation, allowing for better control over dependencies and reducing the risk of unintended interactions between different parts of the system.
 By organizing a Django project into multiple apps, you leverage Django's strengths in modularity and maintainability, leading to a more organized, scalable, and robust web application.
+
+
+
+
+
+Problem 3:
+In Django, URL routing and views work together to handle web requests and return responses. Here's a brief overview of how they interact:
+
+URL Routing:
+Django uses URLconf (URL configuration) to map URL patterns to views. This routing system determines which view should handle a given URL request.
+The URLconf is defined in urls.py files within your Django project and apps.
+
+Views:
+A view is a Python function or class-based view that processes a web request and returns a web response. Views contain the logic for handling user requests, interacting with models, and rendering templates.
+
+How It Works:
+
+URL Request Handling:
+When a user navigates to a URL, Django uses the URLconf to match the URL to a view.
+For example, navigating to /blog/ will match the post_list view.
+
+View Processing:
+The matched view function is called with the request object.
+The view processes the request, possibly querying the database, preparing data, and rendering a template.
+
+Returning Response:
+The view function returns an HttpResponse object, which contains the rendered HTML content.
+This response is sent back to the user's browser, displaying the requested page.
+By organizing URL patterns and views, Django efficiently handles web requests and responses, making it easy to build dynamic web applications.
